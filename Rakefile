@@ -42,7 +42,7 @@ def developers_from_location
   locations = ENV['GITHUB_LOCATION'].split(",").map { |e| e.strip }
   locations_query = locations.map { |location| "location:#{location}" } 
   locations_query = locations_query.join(", ")
-  Octokit.search_users("#{locations_query} repos:>0").items #currently does an "and" search--may want to use "or" (?)
+  Octokit.search_users("#{locations_query} repos:>0").items 
 end
 
 def repos_for_dev(dev, time_since)
