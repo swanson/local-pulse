@@ -1,0 +1,11 @@
+Some stuff people made
+
+<ul>
+<% @repos.each do |repo| %>
+  <li>
+    <a href="https://github.com/<%= repo.name %>"><%= repo.name %></a> &mdash; 
+    <%= repo.description %> 
+    (<%= repo.created_at.strftime("%m/%d/%Y") %>)
+  </li>
+<% end %>
+</ul>
