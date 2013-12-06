@@ -1,6 +1,6 @@
 def prompt(*args)
   print(*args)
-  gets
+  gets.chomp
 end
 
 def initialize_user
