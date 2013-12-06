@@ -13,8 +13,7 @@ end
 Dotenv.load
 
 Octokit.configure do |c|
-  c.login = ENV['GITHUB_USERNAME'] 
-  c.password = ENV['GITHUB_PASSWORD']
+  c.access_token = ENV['GITHUB_OAUTH_TOKEN']
 end
 
 Octokit.auto_paginate = true
